@@ -1,5 +1,7 @@
 package CatPet;
 
+import java.util.Random;
+
 // 持有所有builder设置的属性
 // 持有state
 public class Cat {
@@ -23,7 +25,8 @@ public class Cat {
         this.gender = gender;
         this.age = age;
 
-        this.state = null;
+        // the inital state is satisfied
+        this.state = new SatisfiedState();
     }
 
     public void showInfo() {
@@ -39,7 +42,6 @@ public class Cat {
         //if we have an existing state,let it decicde how to meow
         if(state != null){
             state.meow(this);
-            return;
         }else{
             System.out.println(name + " meows without any special feeling");
         }
@@ -53,6 +55,19 @@ public class Cat {
         this.state = state;
     }
 
-    // get users action and change cat's state
+    // change state to hungry/sleepy randomly
+    public void triggerRandomState(){
+        double random = Math.random();
+
+        if(random < 0.5){
+            setState(new HungryState());
+            // use meow method to inform user the state has changed
+            meow();
+        }else{
+            setState(new SleepyState());
+            meow();
+        }
+    }
+
 
 }

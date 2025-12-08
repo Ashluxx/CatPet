@@ -20,5 +20,7 @@ public class Main {
 
         myCat.setState(new SleepyState());
         myCat.meow();
+
+        myCat.triggerRandomState();
     }
 }
