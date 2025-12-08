@@ -39,6 +39,7 @@ public class CatBuilder {
         this.age = age;
         return this;
     }
+
     public Cat createCat() {
         return new Cat(name, breed, eyecolor, haircolor, gender, age);
     }

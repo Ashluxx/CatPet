@@ -26,6 +26,15 @@ public class Cat {
         this.state = null;
     }
 
+    public void showInfo() {
+        System.out.println("Name: " + name);
+        System.out.println("Breed: " + breed);
+        System.out.println("Eyecolor: " + eyecolor);
+        System.out.println("Haircolor: " + haircolor);
+        System.out.println("Gender: " + gender);
+        System.out.println("Age: " + age);
+    }
+
     public void meow(){
         //if we have an existing state,let it decicde how to meow
         if(state != null){
@@ -43,5 +52,7 @@ public class Cat {
     public void setState(CatState state){
         this.state = state;
     }
+
+    // get users action and change cat's state
 
 }

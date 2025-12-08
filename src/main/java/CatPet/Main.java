@@ -12,9 +12,13 @@ public class Main {
                 .name("Coco")
                 .createCat();
 
+        myCat.showInfo();
         myCat.meow();
 
         myCat.setState(new HungryState());
+        myCat.meow();
+
+        myCat.setState(new SleepyState());
         myCat.meow();
     }
 }
