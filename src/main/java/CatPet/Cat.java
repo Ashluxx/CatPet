@@ -11,8 +11,7 @@ public class Cat {
     String gender;
     int age;
 
-    //prepare for state pattern
-    String status;
+    CatState state;
 
 
     public Cat(String name, String breed, String eyecolor,
@@ -24,21 +23,25 @@ public class Cat {
         this.gender = gender;
         this.age = age;
 
-        this.status = "normal";
+        this.state = null;
     }
 
     public void meow(){
-        System.out.println(name + " meows");
-        System.out.println(name + " feels " + status + " right now.");
+        //if we have an existing state,let it decicde how to meow
+        if(state != null){
+            state.meow(this);
+            return;
+        }else{
+            System.out.println(name + " meows without any special feeling");
+        }
     }
 
-    //prepare for state pattern
-    public String getStatus(){
-        return status;
+    public CatState getState(){
+        return state;
     }
 
-    public void setStatus(String status){
-        this.status = status;
+    public void setState(CatState state){
+        this.state = state;
     }
 
 }

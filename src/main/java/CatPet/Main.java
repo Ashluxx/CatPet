@@ -3,9 +3,6 @@ package CatPet;
 public class Main {
     public static void main(String[] args) {
 
-        /*Cat myCat = new Cat("Coco","Ragdoll",
-                "Blue", "White", "Male", 3);*/
-
         Cat myCat = new CatBuilder()
                 .age(3)
                 .breed("Ragdoll")
@@ -17,7 +14,7 @@ public class Main {
 
         myCat.meow();
 
-        myCat.setStatus("hungry");
+        myCat.setState(new HungryState());
         myCat.meow();
     }
 }
