@@ -1,4 +1,5 @@
 package CatPet;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,6 +18,20 @@ public class Main {
 
         myCat.triggerRandomState();
 
-        myCat.handleAction("play");
+        Scanner input = new Scanner(System.in);
+
+        while (true) {
+            System.out.print("Enter Your Action(feed/play/exit): ");
+            String action = input.nextLine();
+
+
+            if ("exit".equals(action)) {
+                System.out.println("Goodbye.");
+                break;
+            }
+
+            myCat.handleAction(action);
+
+        }
     }
 }
