@@ -15,12 +15,8 @@ public class Main {
         myCat.showInfo();
         myCat.meow();
 
-        myCat.setState(new HungryState());
-        myCat.meow();
-
-        myCat.setState(new SleepyState());
-        myCat.meow();
-
         myCat.triggerRandomState();
+
+        myCat.handleAction("play");
     }
 }

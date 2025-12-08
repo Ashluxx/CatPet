@@ -69,5 +69,27 @@ public class Cat {
         }
     }
 
+    // change state according to users input
+    public void handleAction(String action){
+       //get current state
+        String current = state.getName();
 
+        if("hungry".equals(current)) {
+            if (action.equals("feed")) {
+                setState(new SatisfiedState());
+                meow();
+            } else {
+                System.out.println(name + " is too hungry to do anything else.");
+            }
+        }else if("sleepy".equals(current)){
+            if(action.equals("play")){
+                setState(new SatisfiedState());
+                meow();
+            }else{
+                System.out.println(name + " is too sleepy to do anything else.");
+            }
+        }else{
+                System.out.println(name + " don't need anything.");
+            }
+    }
 }
