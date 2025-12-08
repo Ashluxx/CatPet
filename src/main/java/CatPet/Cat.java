@@ -19,13 +19,11 @@ public class Cat {
         this.haircolor = haircolor;
         this.gender = gender;
         this.age = age;
-
-        public void meow(){
-            System.out.println(name + "meows");
-        }
-
     }
 
+    public void meow(){
+        System.out.println(name + " meows");
+    }
 
 
 }
