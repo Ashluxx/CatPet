@@ -11,6 +11,10 @@ public class Cat {
     String gender;
     int age;
 
+    //prepare for state pattern
+    String status;
+
+
     public Cat(String name, String breed, String eyecolor,
                String haircolor, String gender, int age) {
         this.name = name;
@@ -19,11 +23,22 @@ public class Cat {
         this.haircolor = haircolor;
         this.gender = gender;
         this.age = age;
+
+        this.status = "normal";
     }
 
     public void meow(){
         System.out.println(name + " meows");
+        System.out.println(name + " feels " + status + " right now.");
     }
 
+    //prepare for state pattern
+    public String getStatus(){
+        return status;
+    }
+
+    public void setStatus(String status){
+        this.status = status;
+    }
 
 }
