@@ -16,5 +16,8 @@ public class Main {
                 .createCat();
 
         myCat.meow();
+
+        myCat.setStatus("hungry");
+        myCat.meow();
     }
 }
