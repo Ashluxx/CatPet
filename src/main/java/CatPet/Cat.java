@@ -1,7 +1,5 @@
 package CatPet;
 
-import java.util.Random;
-
 // 持有所有builder设置的属性
 // 持有state
 public class Cat {

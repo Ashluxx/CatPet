@@ -7,6 +7,7 @@ public class SleepyState implements CatState {
         System.out.println(cat.name + " let out a sleepy little meow");
     }
 
+    @Override
     public String getName(){
         return "sleepy";
     }

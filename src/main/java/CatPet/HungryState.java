@@ -7,6 +7,7 @@ public class HungryState implements CatState {
         System.out.println(cat.name + " let out a hungry little meow");
     }
 
+    @Override
     public String getName(){
         return "hungry";
     }

@@ -7,6 +7,7 @@ public class SatisfiedState implements CatState{
         System.out.println(cat.name + " is satisfied now :3");
     }
 
+    @Override
     public String getName(){
         return "satisfied";
     }
