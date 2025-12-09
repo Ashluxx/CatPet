@@ -6,10 +6,12 @@
  */
 package CatPet;
 
-// 持有所有builder设置的属性
-// 持有state
+/**
+ * A cat in the pet system
+ * It stores all attributes from the builder and holds the current CatState
+ */
 public class Cat {
-    // all attribute
+
     String name;
     String breed;
     String eyecolor;
@@ -19,7 +21,9 @@ public class Cat {
 
     CatState state;
 
-
+    /**
+     * Create a cat with basic information.
+     */
     public Cat(String name, String breed, String eyecolor,
                String haircolor, String gender, int age) {
         this.name = name;
@@ -33,6 +37,9 @@ public class Cat {
         this.state = new SatisfiedState();
     }
 
+    /**
+     * Print all basic information of this cat to the console
+     */
     public void showInfo() {
         System.out.println("Name: " + name);
         System.out.println("Breed: " + breed);
@@ -42,24 +49,31 @@ public class Cat {
         System.out.println("Age: " + age);
     }
 
+    /**
+     * Let the cat meow based on its current state
+     */
     public void meow(){
-        //if we have an existing state,let it decicde how to meow
-        if(state != null){
-            state.meow(this);
-        }else{
-            System.out.println(name + " meows without any special feeling");
-        }
+        state.meow(this);
     }
 
+    /**
+     * Return the current state of cat
+     */
     public CatState getState(){
         return state;
     }
 
+    /**
+     * set a new state for cat
+     */
     public void setState(CatState state){
         this.state = state;
     }
 
-    // change state to hungry/sleepy randomly
+    /**
+     * change state to hungry/sleepy randomly
+     * after that calls meow() to show the new state
+     */
     public void triggerRandomState(){
         double random = Math.random();
 
@@ -77,7 +91,9 @@ public class Cat {
         }
     }
 
-    // change state according to users input
+    /**
+     * change state according to users input
+     */
     public void handleAction(String action){
        //get current state
         String current = state.getName();

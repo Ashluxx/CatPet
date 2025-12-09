@@ -7,6 +7,10 @@
 package CatPet;
 import java.util.Scanner;
 
+/**
+ * entry of the catpet application
+ * user can create a cat and interact with it by using console
+ */
 public class Main {
     public static void main(String[] args) {
 

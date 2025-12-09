@@ -7,14 +7,19 @@
 
 package CatPet;
 
-// the most important part of State Pattern
-// interface that used to show stae of cat
+/**
+ * state of a cat in the state pattern
+ */
 public interface CatState{
 
-    // Defines how the cat acts
+    /**
+     * let cat meows according to the current state
+     */
     void meow(Cat cat);
 
-    // Returns the unique name of this state
+    /**
+     * return the name of current state
+     */
     String getName();
 
 }
