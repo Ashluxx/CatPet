@@ -41,19 +41,41 @@ public class Main {
 
         myCat.showInfo();
 
-        myCat.triggerRandomState();
+        // outer loop,  make sure cat will refresh state continuously
+        boolean running = true;
+        while (running) {
 
-        while (true) {
-            System.out.print("Enter Your Action(feed/play/exit): ");
-            String action = input.nextLine();
-
-            if ("exit".equals(action)) {
-                System.out.println("Goodbye.");
-                break;
+            // pausing shortly to enhance the user experience
+            try {
+                System.out.println("--- Waiting for a new mood ---");
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
             }
 
-            myCat.handleAction(action);
+            // set a new state randomly
+            myCat.triggerRandomState();
 
+            //inner loop, if user's action is wrong, allow user to try again
+            while(true){
+                System.out.print("Enter Your Action(feed/play/exit): ");
+                String action = input.nextLine();
+
+                if ("exit".equalsIgnoreCase(action)) {
+                    System.out.println("Goodbye.");
+                    running = false; // stop the outer loop
+                    break;
+                }
+                // record the state before and after the action
+                String before = myCat.getState().getName();
+
+                myCat.handleAction(action);
+
+                String after = myCat.getState().getName();
+
+                if (!"satisfied".equals(before) && "satisfied".equals(after)) {
+                    break;
+                }
+            }
         }
     }
 }

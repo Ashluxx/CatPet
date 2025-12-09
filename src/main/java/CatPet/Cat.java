@@ -62,10 +62,14 @@ public class Cat {
         if(random < 0.5){
             setState(new HungryState());
             // use meow method to inform user the state has changed
+            System.out.println("==================================");
             meow();
+            System.out.println("==================================");
         }else{
             setState(new SleepyState());
+            System.out.println("==================================");
             meow();
+            System.out.println("==================================");
         }
     }
 
@@ -77,14 +81,18 @@ public class Cat {
         if("hungry".equals(current)) {
             if (action.equals("feed")) {
                 setState(new SatisfiedState());
+                System.out.println("==================================");
                 meow();
+                System.out.println("==================================");
             } else {
                 System.out.println(name + " is too hungry to do anything else.");
             }
         }else if("sleepy".equals(current)){
             if(action.equals("play")){
                 setState(new SatisfiedState());
+                System.out.println("==================================");
                 meow();
+                System.out.println("==================================");
             }else{
                 System.out.println(name + " is too sleepy to do anything else.");
             }
