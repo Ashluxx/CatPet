@@ -56,6 +56,7 @@ public class Main {
                 System.out.println("--- Waiting for a new mood ---");
                 Thread.sleep(2000);
             } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
             }
 
             // set a new state randomly
@@ -85,3 +86,8 @@ public class Main {
         }
     }
 }
+// reference:https://medium.com/@AlexanderObregon/how-to-pause-a-java-program-for-a-few-seconds-safely-and-correctly-7b49c71576f9
+// https://stackoverflow.com/questions/886955/how-do-i-break-out-of-nested-loops-in-java
+// https://www.geeksforgeeks.org/java/java-nested-loops-with-examples/
+// https://www.w3schools.com/java/java_user_input.asp
+// https://stackoverflow.com/questions/2942686/taking-integer-input-in-java

@@ -105,3 +105,7 @@ public class Cat {
             }
     }
 }
+// reference: https://www.w3schools.com/java/ref_string_equals.asp
+// reference: https://www.w3schools.com/java/java_howto_random_number.asp
+// https://www.geeksforgeeks.org/java/generating-random-numbers-in-java/
+// https://stackoverflow.com/questions/6319727/what-exactly-does-double-mean-in-java

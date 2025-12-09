@@ -4,6 +4,7 @@
  * CS665 A1 Fall2025
  * Final Project
  */
+
 package CatPet;
 
 // the most important part of State Pattern
@@ -17,3 +18,6 @@ public interface CatState{
     String getName();
 
 }
+// reference: https://www.baeldung.com/java-state-design-pattern
+// reference: https://refactoring.guru/design-patterns/state
+// https://www.geeksforgeeks.org/java/interfaces-in-java

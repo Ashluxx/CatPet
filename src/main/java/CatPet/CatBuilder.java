@@ -4,6 +4,7 @@
  * CS665 A1 Fall2025
  * Final Project
  */
+
 package CatPet;
 
 //Builder pattern is used to solve the long list of inputs (parameters) in the Cat constructor.
@@ -50,3 +51,5 @@ public class CatBuilder {
         return new Cat(name, breed, eyecolor, haircolor, gender, age);
     }
 }
+// reference: https://www.digitalocean.com/community/tutorials/builder-design-pattern-in-java
+// reference: https://www.baeldung.com/java-builder-pattern
