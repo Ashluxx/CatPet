@@ -1,3 +1,9 @@
+/**
+ * 2025-12-08
+ * Yuke Cao
+ * CS665 A1 Fall2025
+ * Final Project
+ */
 package CatPet;
 
 //Builder pattern is used to solve the long list of inputs (parameters) in the Cat constructor.

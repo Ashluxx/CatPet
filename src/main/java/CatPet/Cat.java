@@ -1,3 +1,9 @@
+/**
+ * 2025-12-08
+ * Yuke Cao
+ * CS665 A1 Fall2025
+ * Final Project
+ */
 package CatPet;
 
 // 持有所有builder设置的属性
