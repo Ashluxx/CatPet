@@ -9,9 +9,14 @@ package CatPet;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * unit test for the project
+ */
 public class CatTest {
 
-    // defalut state of a cat should be satisfied
+    /**
+     * the default state of a cat should be "satisefied"
+     */
     @Test
     public void testNewCatDefaultStateIsSatisfied(){
         Cat cat = new Cat("Coco", "Ragdoll", "Blue", "White", "Male", 3);
@@ -20,7 +25,9 @@ public class CatTest {
         assertEquals("satisfied", cat.getState().getName());
     }
 
-    // builder should create a cat with the given value
+    /**
+     * builder should create a cat with the given value
+     */
     @Test
     public void testBuilderCreatesCatWithCorrectAttributes() {
         CatBuilder builder = new CatBuilder()
@@ -41,7 +48,10 @@ public class CatTest {
         assertEquals(10, cat.age);
     }
 
-    // When the cat is hungry and user feeds it, state should become satisfied
+    /**
+     * When the cat is hungry and user feeds it,
+     * state should change to "satisfied"
+     */
     @Test
     public void testHungryFeedBecomesSatisfied() {
         Cat cat = new Cat("Coco", "Ragdoll", "Blue", "White", "Male", 3);
@@ -56,7 +66,10 @@ public class CatTest {
         assertEquals("satisfied", cat.getState().getName());
     }
 
-    // When the cat is sleepy and user plays with it, state should become satisfied
+    /**
+     * When the cat is sleepy and user plays with it,
+     * state should change to "satisfied"
+     */
     @Test
     public void testSleepyPlayBecomesSatisfied() {
         Cat cat = new Cat("Coco", "Ragdoll", "Blue", "White", "Male", 3);
@@ -71,7 +84,9 @@ public class CatTest {
         assertEquals("satisfied", cat.getState().getName());
     }
 
-    // Wrong action should not change state to satisfied
+    /**
+     * Wrong action should not change state to satisfied
+     */
     @Test
     public void testWrongActionDoesNotChangeHungryState() {
         Cat cat = new Cat("Coco", "Ragdoll", "Blue", "White", "Male", 3);
